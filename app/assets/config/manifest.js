@@ -1,2 +1,3 @@
 //= link_tree ../images
-//= link_
+//= link_directory ../javascripts .js
+//= link_directory ../stylesheets .css
