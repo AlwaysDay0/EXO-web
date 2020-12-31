@@ -32,4 +32,17 @@ nav {
   }
 }
 
-.co
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.actions {
+  margin: 1em 0;
+}
+
+.field {
+  margin-top: 1em;
+  label {
+    min-width: 120px;
+ 
