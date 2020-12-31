@@ -1,3 +1,13 @@
 body {
   margin: 0;
-  font-fami
+  font-family: monospace, Helvetica, sans-serif;
+  letter-spacing: 0.75px;
+}
+
+a {
+  color: #067df7;
+  text-decoration: none;
+}
+
+a[data-method='delete']:hover {
+  c
