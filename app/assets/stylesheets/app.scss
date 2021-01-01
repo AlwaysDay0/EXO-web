@@ -45,4 +45,17 @@ nav {
   margin-top: 1em;
   label {
     min-width: 120px;
- 
+    display: inline-block;
+  }
+  input {
+    padding: 3px 7.5px;
+  }
+}
+
+.flash-notice {
+  background: #fdf;
+  padding: 8px;
+  margin-right: -8px;
+}
+
+.smal
