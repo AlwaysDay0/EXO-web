@@ -18,4 +18,9 @@ class Admin::AlbumsController < ApplicationController
   def add_record
   end
 
-  def save_reco
+  def save_record
+    @artist = Artist.find(params[:album][:artist_ids])
+    @song = Song.find(params[:album][:song_ids])
+    @album.songs << @song
+    @album.artists << @artist
+    @
