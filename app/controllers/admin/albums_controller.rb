@@ -23,4 +23,8 @@ class Admin::AlbumsController < ApplicationController
     @song = Song.find(params[:album][:song_ids])
     @album.songs << @song
     @album.artists << @artist
-    @
+    @artist.songs << @song
+    redirect_to admin_albums_path, notice: "Song and artist were added to the #{@album.title}"
+  end
+  
+  def creat
