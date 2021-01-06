@@ -30,4 +30,13 @@ class Admin::AlbumsController < ApplicationController
   def create
     @album = Album.new(albums_params)
     if @album.save
-      redirect_to admin_album_path(@album), notice: 'Album was successfully create
+      redirect_to admin_album_path(@album), notice: 'Album was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  def update
+    @album = Album.find(params[:id])
+    if @album.update(albums_params)
+   
