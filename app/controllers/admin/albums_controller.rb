@@ -27,4 +27,7 @@ class Admin::AlbumsController < ApplicationController
     redirect_to admin_albums_path, notice: "Song and artist were added to the #{@album.title}"
   end
   
-  def creat
+  def create
+    @album = Album.new(albums_params)
+    if @album.save
+      redirect_to admin_album_path(@album), notice: 'Album was successfully create
