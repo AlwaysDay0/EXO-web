@@ -39,4 +39,10 @@ class Admin::AlbumsController < ApplicationController
   def update
     @album = Album.find(params[:id])
     if @album.update(albums_params)
-   
+      redirect_to admin_album_path(@album), notice: 'Album was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  def des
