@@ -45,4 +45,11 @@ class Admin::AlbumsController < ApplicationController
     end
   end
 
-  def des
+  def destroy
+    @album.destroy
+    redirect_to admin_albums_path, notice: 'Album was successfully destroyed.'
+  end
+
+  private
+  def set_albums
+    @album = Album.fin
