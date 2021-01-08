@@ -52,4 +52,10 @@ class Admin::AlbumsController < ApplicationController
 
   private
   def set_albums
-    @album = Album.fin
+    @album = Album.find(params[:id])
+  end
+
+  def albums_params
+    params.require(:album).permit(:title)
+  end
+end
