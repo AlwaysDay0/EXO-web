@@ -19,4 +19,13 @@ class Admin::SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
     if @song.save
-      redirect_to admin_song_path(@song), notice: 'song was succe
+      redirect_to admin_song_path(@song), notice: 'song was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  def update
+    @song = Song.find(params[:id])
+    if @song.update(song_params)
+      red
