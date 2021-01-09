@@ -28,4 +28,12 @@ class Admin::SongsController < ApplicationController
   def update
     @song = Song.find(params[:id])
     if @song.update(song_params)
-      red
+      redirect_to admin_song_path(@song), notice: 'song was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @song.destroy
+    redirec
