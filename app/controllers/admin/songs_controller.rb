@@ -14,3 +14,9 @@ class Admin::SongsController < ApplicationController
   
   def show
   end
+
+  
+  def create
+    @song = Song.new(song_params)
+    if @song.save
+      redirect_to admin_song_path(@song), notice: 'song was succe
