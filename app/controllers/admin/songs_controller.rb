@@ -44,4 +44,7 @@ class Admin::SongsController < ApplicationController
     @song = Song.find(params[:id])
   end
 
-  def song_pa
+  def song_params
+    params.require(:song).permit(:title ,:description ,:rating ,:duration ,:price ,:status ,:progress)
+  end
+end
