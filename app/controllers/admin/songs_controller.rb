@@ -36,4 +36,12 @@ class Admin::SongsController < ApplicationController
 
   def destroy
     @song.destroy
-    redirec
+    redirect_to admin_songs_path, notice: 'song was successfully destroyed.'
+  end
+
+  private
+  def set_songs
+    @song = Song.find(params[:id])
+  end
+
+  def song_pa
