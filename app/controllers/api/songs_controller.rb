@@ -5,4 +5,8 @@ class Api::SongsController < ApplicationController
   end
 
   def show 
-      @song = Song.find(para
+      @song = Song.find(params[:id])
+      if params[:resource]
+        render json: @song.send(params[:resource])
+      else
+        render json: @song.as_js
