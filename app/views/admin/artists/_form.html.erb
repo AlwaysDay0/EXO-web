@@ -1,3 +1,9 @@
 <%= form_for [:admin, @artist] do |f| %>
   <% if artist.errors.any? %>
-    <div id="er
+    <div id="error_explanation">
+      <ul>
+        <% artist.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </di
