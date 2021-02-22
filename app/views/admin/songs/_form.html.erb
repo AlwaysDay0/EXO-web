@@ -3,4 +3,12 @@
     <div id="error_explanation">
       <ul>
         <% song.errors.full_messages.each do |message| %>
-          <li><%= m
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :ti
