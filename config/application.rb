@@ -18,4 +18,8 @@ require "sprockets/railtie"
 Bundler.require(*Rails.groups)
 
 module AppleMusic
-  class Application < Rails::Applic
+  class Application < Rails::Application
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 5.2
+
+    # Settings in
