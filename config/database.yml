@@ -31,4 +31,8 @@ development:
   # the same name as the operating system user that initialized the database.
   #username: apple-music
 
-  # The password a
+  # The password associated with the postgres role (username).
+  #password:
+
+  # Connect on a TCP socket. Omitted by default since the client uses a
+  # dom
