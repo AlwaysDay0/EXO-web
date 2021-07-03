@@ -39,4 +39,8 @@ development:
   # domain sockets, so uncomment these lines.
   #host: localhost
 
-  # The TCP port t
+  # The TCP port the server listens on. Defaults to 5432.
+  # If your server runs on a different port number, change accordingly.
+  #port: 5432
+
+  # Schema search path.
