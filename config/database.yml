@@ -80,4 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: apple-music_pro
+  database: apple-music_production
+  username: apple-music
+  password: <%= ENV['APPLE-MUSIC_DATABASE_PASSWORD'] %>
