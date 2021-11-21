@@ -6,4 +6,12 @@
 #
 #     I18n.t 'hello'
 #
-# In views, this is al
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the
