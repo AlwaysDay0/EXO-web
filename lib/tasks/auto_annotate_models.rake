@@ -4,4 +4,8 @@
 if Rails.env.development?
   require 'annotate'
   task :set_annotation_options do
-    # You can override any of these by setting an environment variable of 
+    # You can override any of these by setting an environment variable of the
+    # same name.
+    Annotate.set_defaults(
+      'routes'                    => 'false',
+      'position_in_routes'        => 'before
