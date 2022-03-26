@@ -21,4 +21,8 @@ if Rails.env.development?
       'model_dir'                 => 'app/models',
       'root_dir'                  => '',
       'include_version'           => 'false',
-      'require'                   
+      'require'                   => '',
+      'exclude_tests'             => 'false',
+      'exclude_fixtures'          => 'false',
+      'exclude_factories'         => 'false',
+  
