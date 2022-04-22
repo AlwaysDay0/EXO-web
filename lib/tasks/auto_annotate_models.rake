@@ -40,4 +40,7 @@ if Rails.env.development?
       'format_bare'               => 'true',
       'format_rdoc'               => 'false',
       'format_markdown'           => 'false',
-      'sort' 
+      'sort'                      => 'false',
+      'force'                     => 'false',
+      'classified_sort'           => 'true',
+      'trace'                   
