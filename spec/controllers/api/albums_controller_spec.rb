@@ -106,3 +106,23 @@ RSpec.describe Api::AlbumsController, type: :controller do
       }
       expect(response).to have_http_status(:not_found)
     end
+  end
+
+  # Search album
+  describe 'GET search album' do
+    it 'returns http status ok' do
+      get :search, params: { 
+        search: @album.title
+      }
+      expect(response).to have_http_status(:ok)
+    end
+    it 'render the correct search' do
+      get :search, params: { 
+        search: @album.title
+      }
+      expected_album = JSON.parse(response.body)
+      expect(expected_album.size).to eq(1)
+    end
+  end
+
+end
