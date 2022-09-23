@@ -11,4 +11,10 @@ describe Api::SongsController do
   end
   
   # GET /api/songs/
-  d
+  describe 'GET index' do
+    it 'returns http status ok' do
+      get :index
+      expect(response).to have_http_status(:ok)
+    end
+    
+    it 'render json wit
