@@ -28,4 +28,10 @@ describe Api::SongsController do
   # GET /api/songs/:id
   describe 'GET show' do
     it 'returns http status ok' do
-      get :show, params: { id: @song 
+      get :show, params: { id: @song }
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'render the correct @song' do
+        get :show, params: { id: @song }
+        expected_song =
