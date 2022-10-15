@@ -21,4 +21,11 @@ describe Api::SongsController do
       get :index
       songs = JSON.parse(response.body)
       expect(songs.size).to eq 1
-      expect(songs[0]["id"]).to eq @so
+      expect(songs[0]["id"]).to eq @song.id
+    end
+  end
+  
+  # GET /api/songs/:id
+  describe 'GET show' do
+    it 'returns http status ok' do
+      get :show, params: { id: @song 
