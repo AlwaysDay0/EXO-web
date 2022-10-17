@@ -34,4 +34,10 @@ describe Api::SongsController do
 
     it 'render the correct @song' do
         get :show, params: { id: @song }
-        expected_song =
+        expected_song = JSON.parse(response.body)
+        expect(expected_song["id"]).to eq(@song.id)
+    end
+  end
+
+  # GET /api/songs/:id/artists
+  d
