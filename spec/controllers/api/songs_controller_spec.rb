@@ -40,4 +40,7 @@ describe Api::SongsController do
   end
 
   # GET /api/songs/:id/artists
-  d
+  describe 'GET artists' do
+    it 'returns http status ok' do
+      get :artists, params: { song_id: @song }
+      
