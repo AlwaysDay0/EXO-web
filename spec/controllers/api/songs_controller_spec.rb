@@ -69,4 +69,11 @@ describe Api::SongsController do
     end
   end
 
-  #
+  # GET /api/songs/search
+  # (Completar)
+
+  # PATCH /api/songs/:id/progress
+  # (Completar)
+
+  # PATCH /api/songs/:id/rating
+  # (Arreglar
