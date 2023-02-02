@@ -87,4 +87,9 @@ describe Api::SongsController do
   #   end
 
   #   it "returns the updated @song" do
-  #     patch :ra
+  #     patch :rating, params: { 
+  #       id: @song,
+  #       rating: 1
+  #     }
+  #     expected_song = JSON.parse(response.body)
+  #     expect
